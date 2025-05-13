@@ -22,6 +22,16 @@ button {
     cursor: pointer;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
+.custom-button {
+    background-color: #4CAF50; /* green */
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
 button:hover {
     background-color: #8b5c8b;
 }
@@ -51,3 +61,38 @@ span {
     margin-top: 10px;
     color: #555;
 }
+
+.upload-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .upload-button:hover {
+    background-color: #0056b3;
+  }
+
+  #fileName {
+    margin-left: 10px;
+    font-style: italic;
+  }
+/*
+  #resumeInput {
+    display: none; // hide real file input 
+  }
+
+.custom-file-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+*/

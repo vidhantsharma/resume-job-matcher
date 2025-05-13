@@ -15,6 +15,7 @@
 
     <div class="left-section">
     <textarea id="job-description" placeholder="Enter JD here"></textarea>
+    <!--Upload JD Button-->
     <button id="enter-button">Enter</button>
     </div>
 
@@ -26,8 +27,11 @@
 
     <div class="lower-container">
     <div class="lower-section">
-    <button id="upload-button">Upload Resume</button>
-    <span>{%block content%} {%endblock%}</span>
+
+    <!---Upload Resume Button-->
+   <!-- <label for="resumeInput" class="custom-file-button" >Select File</label>-->
+    <input type="file" id="resumeInput" name="resume" accept=".pdf,.doc,.docx"  onclick="this.value=null;" />
+    
     </div>
     </div>
 
