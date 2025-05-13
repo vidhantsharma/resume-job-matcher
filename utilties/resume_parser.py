@@ -12,7 +12,7 @@ class ResumeParser:
     def __init__(self, resume_path=None, debug=False):
         if debug:
             # Use raw string and forward slashes for cross-platform compatibility
-            self.resume_path = os.path.join("samples", "resumes", "MANISH_KUMAR_SINGH.pdf")
+            self.resume_path = os.path.join("samples", "resumes", "vidhant_resume.pdf")
         else:
             if not resume_path:
                 raise ValueError("resume_path must be provided when debug is False")
@@ -51,6 +51,21 @@ class ResumeParser:
                     return name.first, name.last
 
         return "", ""
+    
+    def extract_email(self, text):
+        # Use regex to find email addresses
+        email_pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:\.[a-zA-Z]{2,})?'
+        emails = re.findall(email_pattern, text)
+        return emails[0] if emails else ""
+    
+    def extract_phone(self, text):
+        # Use regex to find phone numbers
+        contact_number = None
+        pattern = r"\b(?:\+?\d{1,3}[-.\s]?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b"
+        match = re.search(pattern, text)
+        if match:
+            contact_number = match.group()
+        return contact_number
 
     # Load skills from CSV file
     def load_skills_from_csv(self, csv_file):
@@ -72,4 +87,6 @@ class ResumeParser:
     def extract_resume_info(self, resume_text):
         # Extract relevant information from the resume text
         first_name, last_name = self.extract_name(resume_text)
-        return {'first_name': first_name, 'last_name': last_name}
+        email = self.extract_email(resume_text)
+        phone = self.extract_phone(resume_text)
+        return {'first_name': first_name, 'last_name': last_name, 'email': email, 'phone': phone}
