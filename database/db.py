@@ -4,7 +4,7 @@ import sqlite3
 from flask import g
 
 RESUME_DB = 'database/resume.db'
-JD_DB='atabase/jd.db'
+JD_DB='database/jd.db'
 
 # Get or create a connection to the resume database
 def get_resume_db():

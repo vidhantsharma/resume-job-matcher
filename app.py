@@ -61,7 +61,7 @@ def init_resume_db():
     cur.execute('''
         CREATE TABLE IF NOT EXISTS resumes (
             resume_id INTEGER PRIMARY KEY AUTOINCREMENT,
-            jd_id INTEGER NOT NULL,
+            jd_id INTEGER,
             filename TEXT NOT NULL,
             content BLOB NOT NULL,
             FOREIGN KEY(jd_id) REFERENCES job_descriptions(jd_id)
@@ -83,35 +83,14 @@ def init_tables():
     init_resume_db()
     return 'JD and Resume tables created!'
 
-@app.route('/add_jd', methods=['POST'])
-def add_jd():
-    title = request.form.get('title')
-    description = request.form.get('description')
-    if not title or not description:
-        return jsonify({'message': 'Missing title or description'}), 400
-    try:
-        conn = get_jd_db()
-        cur = conn.cursor()
-        cur.execute(
-            'INSERT INTO job_descriptions (title, description) VALUES (?, ?)',
-            (title, description)
-        )
-        jd_id = cur.lastrowid
-        conn.commit()
-        return jsonify({'message': 'JD received', 'jd_id': jd_id}), 200
-    except Exception as e:
-        print('Database error:', e)
-        return jsonify({'message': 'Database error'}), 500
-
 @app.route('/upload_resume', methods=['POST'])
 def upload_resume():
-    # Check file and JD ID
-    if 'resume' not in request.files or 'jd_id' not in request.form:
-        return jsonify({'message': 'Missing file or JD ID'}), 400
+    if 'resume' not in request.files:
+        return jsonify({'message': 'Missing resume file'}), 400
+
     file = request.files['resume']
-    jd_id = request.form.get('jd_id', type=int)
-    if file.filename == '' or not jd_id:
-        return jsonify({'message': 'No selected file or invalid JD ID'}), 400
+    if file.filename == '':
+        return jsonify({'message': 'No selected file'}), 400
 
     filename = secure_filename(file.filename)
     save_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
@@ -123,19 +102,58 @@ def upload_resume():
 
         conn = get_resume_db()
         cur = conn.cursor()
+        # Insert with jd_id = NULL for now
         cur.execute(
             'INSERT INTO resumes (jd_id, filename, content) VALUES (?, ?, ?)',
-            (jd_id, filename, content)
+            (None, filename, content)
         )
         resume_id = cur.lastrowid
         conn.commit()
-        return jsonify({'message': f"File '{filename}' uploaded for JD #{jd_id}.", 'resume_id': resume_id}), 200
+        return jsonify({
+            'message': f"File '{filename}' uploaded.",
+            'resume_id': resume_id
+        }), 200
     except Exception as e:
         print('Database error:', e)
         return jsonify({'message': 'Database error'}), 500
 
+@app.route('/add_jd', methods=['POST'])
+def add_jd():
+    data = request.get_json()
+    title = data.get('title')
+    description = data.get('description')
+    resume_id = data.get('resume_id')
+
+    if not title or not description or not resume_id:
+        return jsonify({'message': 'Missing title, description, or resume_id'}), 400
+
+    try:
+        conn_jd = get_jd_db()
+        cur_jd = conn_jd.cursor()
+        cur_jd.execute(
+            'INSERT INTO job_descriptions (title, description) VALUES (?, ?)',
+            (title, description)
+        )
+        jd_id = cur_jd.lastrowid
+        conn_jd.commit()
+
+        # Update resume entry with this jd_id
+        conn_resume = get_resume_db()
+        cur_resume = conn_resume.cursor()
+        cur_resume.execute(
+            'UPDATE resumes SET jd_id = ? WHERE resume_id = ?',
+            (jd_id, resume_id)
+        )
+        conn_resume.commit()
+
+        return jsonify({'message': 'JD received and linked to resume', 'jd_id': jd_id}), 200
+    except Exception as e:
+        print('Database error:', e)
+        return jsonify({'message': 'Database error'}), 500
+
+
 if __name__ == '__main__':
-    # Initialize tables and run app\
+    # Initialize tables and run app
     with app.app_context():
             init_jd_db()
             init_resume_db()
