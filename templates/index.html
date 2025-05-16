@@ -12,13 +12,13 @@
     <h1 id="title">Job Matcher</h1>
 
     <div class="sections-container">
-
+    <!--Upload JD-->
     <div class="left-section">
-    <textarea id="job-description" placeholder="Enter JD here"></textarea>
-    <!--Upload JD Button-->
-    <button id="enter-button">Enter</button>
+    <input type="text" id="jd-input" placeholder="Enter job title…" />
+    <textarea id="jd-desc" placeholder="Enter JD here"></textarea>
+    <button id="enter-button" onclick="readTextField()">Enter</button>
     </div>
-
+    <!--Compiled results-->
     <div class="right-section">
     <textarea id="job-description" placeholder="Results"></textarea>
     </div>
@@ -29,7 +29,6 @@
     <div class="lower-section">
 
     <!---Upload Resume Button-->
-   <!-- <label for="resumeInput" class="custom-file-button" >Select File</label>-->
     <input type="file" id="resumeInput" name="resume" accept=".pdf,.doc,.docx"  onclick="this.value=null;" />
     
     </div>

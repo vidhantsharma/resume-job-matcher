@@ -23,17 +23,44 @@ function uploadResume() {
     });
 }
 
+async function uploadJD() {
+  const title = document.getElementById('jd-input').value.trim();
+  const description = document.getElementById('jd-desc').value.trim();
+  if (!title || !description) {
+    return alert("Fill in both fields.");
+  }
+
+  try {
+    const res = await fetch('/add_jd', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({title, description})
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.message);
+
+    currentJdId = data.jd_id;                // store the new JD ID
+    alert(data.message);
+
+    // now enable the resume form
+    document.getElementById('resume-form').style.display = 'block';
+  } catch(err) {
+    console.error(err);
+    alert("Failed to upload JD: " + err.message);
+  }
+}
+
 
 document.getElementById('enter-button').addEventListener('click', function() {
     // Functionality for the Enter button
-    let jobDescription = document.getElementById('job-description').value;
-    console.log('Job Description:', jobDescription);
+    uploadJD();
+    console.log('Job Description Upoaded', jobDescription);
     // Add logic to process the job description
 });
 
-document.getElementById('resumeInput').addEventListener('click', function() {
+document.getElementById('resumeInput').addEventListener('change', function() {
     // Functionality for the Upload Resume button
+    uploadResume();
     console.log('Resume Uploaded');
-    uploadResume()
 });
 
