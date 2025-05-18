@@ -9,3 +9,6 @@ uploads/
 
 # ignore database
 *.db
+
+# ignore backups
+backup/

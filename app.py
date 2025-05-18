@@ -150,8 +150,7 @@ def add_jd():
     except Exception as e:
         print('Database error:', e)
         return jsonify({'message': 'Database error'}), 500
-
-
+    
 if __name__ == '__main__':
     # Initialize tables and run app
     with app.app_context():
