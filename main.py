@@ -2,6 +2,20 @@ from utilties.job_description_parser.job_description_parser import JobDescriptio
 from utilties.resume_parser.resume_parser import ResumeParser
 import os
 
+def get_parsed_resume_data(resume_text):
+    # Dummy implementation; replace with actual logic
+    return {
+        "Name": "John Doe",
+        "Email": "john@example.com",
+        "Skills": ["Python", "Machine Learning", "NLP"]
+    }
+
+def get_parsed_jd_data(jd_text):
+    # Dummy implementation; replace with actual logic
+    return {
+        "Skills": ["Python", "MLOps", "Machine Learning", "NLP"]
+    }
+
 def main():
     # Example usage
     resume_path = os.path.join("samples", "resumes", "vidhant_resume.pdf")
