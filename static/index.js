@@ -25,8 +25,31 @@ function uploadResume() {
 
             const textarea = document.getElementById('parsedResumeText');
             let formatted = '';
-            for (const [key, value] of Object.entries(data.parsed_data)) {
-                formatted += `${key}: ${Array.isArray(value) ? value.join(', ') : value}\n`;
+            const order = [
+                'first_name',
+                'last_name',
+                'email',
+                'phone',
+                'total_experience',
+                'degrees',
+                'institutions',
+                'majors'
+            ];
+            const labels = {
+                first_name: 'First Name',
+                last_name: 'Last Name',
+                email: 'Email',
+                phone: 'Phone',
+                total_experience: 'Total Experience',
+                degrees: 'Degrees',
+                institutions: 'Institutions',
+                majors: 'Majors'
+            };
+            for (const key of order) {
+                if (key in data.parsed_data) {
+                    const value = data.parsed_data[key];
+                    formatted += `${labels[key]}: ${Array.isArray(value) ? value.join(', ') : value}\n`;
+                }
             }
             textarea.value = formatted;
 

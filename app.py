@@ -7,7 +7,7 @@ import click
 
 # Import the parser
 from main import get_parsed_resume_data
-from main import get_parsed_jd_data  # assuming you have a function to parse JD PDFs
+from main import get_parsed_jd_data
 
 
 app = Flask(__name__)
