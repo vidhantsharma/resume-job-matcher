@@ -3,3 +3,12 @@ __pycache__/
 
 # ignore samples
 samples/
+
+# ignore uploads
+uploads/
+
+# ignore database
+*.db
+
+# ignore backups
+backup/

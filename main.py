@@ -1,23 +1,39 @@
-from utilties.job_description_parser import JobDescriptionParser
-from utilties.resume_parser import ResumeParser
+from utilties.job_description_parser.job_description_parser import JobDescriptionParser
+from utilties.resume_parser.resume_parser import ResumeParser
+import os
 
-DEBUG = True
-
-def main():
-    # Example usage
-    resume_path = "path/to/resume.pdf"
-    job_description_path = "path/to/job_description.txt"
-
-    # Parse the resume
-    resume_parser = ResumeParser(resume_path, debug=DEBUG)
+def get_parsed_resume_data(resume_text):
+    resume_parser = ResumeParser(resume_binary=resume_text)
     resume_data = resume_parser.parse()
-    print("Resume Data:", resume_data)
+    return resume_data
+    # # Dummy implementation; replace with actual logic
+    # return {
+    #     "Name": "John Doe",
+    #     "Email": "john@example.com",
+    #     "Skills": ["Python", "Machine Learning", "NLP"]
+    # }
 
-    # Parse the job description
-    job_description_parser = JobDescriptionParser(job_description_path, debug=DEBUG)
-    # job_description_data = job_description_parser.parse()
+def get_parsed_jd_data(jd_text):
+    # Dummy implementation; replace with actual logic
+    return {
+        "Skills": ["Python", "MLOps", "Machine Learning", "NLP"]
+    }
+
+# def main():
+#     # Example usage
+#     resume_path = os.path.join("samples", "resumes", "vidhant_resume.pdf")
+#     job_description_path = "path/to/job_description.txt"
+
+#     # Parse the resume
+#     resume_parser = ResumeParser(resume_path)
+#     resume_data = resume_parser.parse()
+#     print("Resume Data:", resume_data)
+
+#     # Parse the job description
+#     job_description_parser = JobDescriptionParser(job_description_path)
+#     job_description_data = job_description_parser.parse()
 
 
-if __name__ == "__main__":
-    print("Starting Resume and Job Description Parser...")
-    main()
+# if __name__ == "__main__":
+#     print("Starting Resume and Job Description Parser...")
+#     main()
