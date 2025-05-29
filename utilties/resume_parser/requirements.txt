@@ -1,0 +1,7 @@
+langchain==0.2.0
+langchain-community==0.2.0
+langchain-ollama==0.1.0
+pydantic==2.7.0
+pymupdf==1.24.0
+
+# ollama pull gemma2:9b-instruct-q4_K_M: use chatgpt or something if u dont know how to donwload throguh Ollama, size is nearly 5.5gb  or somthing
