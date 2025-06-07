@@ -13,12 +13,17 @@ function uploadResume() {
     const formData = new FormData();
     formData.append('resume', file);
 
+    // Show spinner
+    document.getElementById('spinner-overlay').style.display = 'flex';
+
     fetch('http://localhost:5000/upload_resume', {
         method: 'POST',
         body: formData
     })
     .then(response => response.json())
     .then(data => {
+        document.getElementById('spinner-overlay').style.display = 'none';
+
         if (data.resume_id) {
             resumeUploaded = true;
             uploadedResumeId = data.resume_id;
@@ -33,7 +38,8 @@ function uploadResume() {
                 'total_experience',
                 'degrees',
                 'institutions',
-                'majors'
+                'majors',
+                'skills'
             ];
             const labels = {
                 first_name: 'First Name',
@@ -43,7 +49,8 @@ function uploadResume() {
                 total_experience: 'Total Experience',
                 degrees: 'Degrees',
                 institutions: 'Institutions',
-                majors: 'Majors'
+                majors: 'Majors',
+                skills: 'Skills'
             };
             for (const key of order) {
                 if (key in data.parsed_data) {

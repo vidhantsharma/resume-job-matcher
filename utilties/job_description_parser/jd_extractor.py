@@ -37,7 +37,7 @@ class JobDescriptionExtractor:
             """You are an expert job description analyzer. Extract information and respond ONLY with valid JSON. \
 CRITICAL REQUIREMENTS:
 - You MUST respond with a valid JSON object following the exact schema below
-- Extract ONLY information explicitly mentioned in the job description
+- Extract ONLY information explicitly mentioned in the job description or resume
 - If information is missing, use null for strings or [] for arrays
 - DO NOT add explanations, comments, or text outside the JSON
 - DO NOT use markdown formatting or code blocks
@@ -131,7 +131,8 @@ def main():
     print("Job Description Extractor")
     print("=" * 40)
     
-    pdf_path = input("\n📁 Enter the PDF file path: ").strip()
+    # pdf_path = input("\n📁 Enter the PDF file path: ").strip()
+    pdf_path = r"samples\resumes\vidhant_resume.pdf"
     
     print(f"\n📄 Processing: {pdf_path}")
     print("⏳ Extracting data... (this may take a moment)")

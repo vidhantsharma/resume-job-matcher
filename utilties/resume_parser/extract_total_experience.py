@@ -19,6 +19,7 @@ class ExtractTotalExperience:
             if months > 0:
                 total_months += months
 
+        total_months += 1
         years = total_months // 12
         months = total_months % 12
 

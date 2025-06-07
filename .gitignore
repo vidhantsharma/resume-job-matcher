@@ -12,3 +12,10 @@ uploads/
 
 # ignore backups
 backup/
+
+# ignore models
+llm_model/
+ner_model/
+
+# ignore helper
+helper/

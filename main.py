@@ -6,12 +6,6 @@ def get_parsed_resume_data(resume_text):
     resume_parser = ResumeParser(resume_binary=resume_text)
     resume_data = resume_parser.parse()
     return resume_data
-    # # Dummy implementation; replace with actual logic
-    # return {
-    #     "Name": "John Doe",
-    #     "Email": "john@example.com",
-    #     "Skills": ["Python", "Machine Learning", "NLP"]
-    # }
 
 def get_parsed_jd_data(jd_text):
     # Dummy implementation; replace with actual logic

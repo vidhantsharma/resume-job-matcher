@@ -1,0 +1,973 @@
+[
+    {
+        "text": "Proficient in Python, Java, and C++",
+        "entities": [
+            [13, 19, "SKILL"],
+            [21, 25, "SKILL"],
+            [30, 33, "SKILL"]
+        ]
+    },
+    {
+        "text": "Experience with machine learning algorithms",
+        "entities": [
+            [12, 28, "SKILL"]
+        ]
+    },
+    {
+        "text": "Familiar with TensorFlow and PyTorch",
+        "entities": [
+            [13, 24, "SKILL"],
+            [29, 36, "SKILL"]
+        ]
+    },
+    {
+        "text": "Strong understanding of HTML, CSS, and JavaScript",
+        "entities": [
+            [19, 22, "SKILL"],
+            [24, 27, "SKILL"],
+            [32, 41, "SKILL"]
+        ]
+    },
+    {
+        "text": "Expertise in data analysis and visualization using Tableau",
+        "entities": [
+            [20, 30, "SKILL"],
+            [35, 46, "SKILL"]
+        ]
+    },
+    {
+        "text": "Skilled in SQL database management",
+        "entities": [
+            [10, 13, "SKILL"],
+            [24, 35, "SKILL"]
+        ]
+    },
+    {
+        "text": "Knowledge of React and Angular frameworks",
+        "entities": [
+            [12, 17, "SKILL"],
+            [22, 29, "SKILL"]
+        ]
+    },
+    {
+        "text": "Proficiency in MATLAB for numerical computing",
+        "entities": [
+            [14, 19, "SKILL"],
+            [28, 44, "SKILL"]
+        ]
+    },
+    {
+        "text": "Experience with cloud technologies like AWS and Azure",
+        "entities": [
+            [17, 20, "SKILL"],
+            [25, 30, "SKILL"]
+        ]
+    },
+    {
+        "text": "Expertise in natural language processing and NLP techniques",
+        "entities": [
+            [20, 46, "SKILL"],
+            [51, 54, "SKILL"]
+        ]
+    },
+    {
+        "text": "Familiarity with Git version control system",
+        "entities": [
+            [16, 18, "SKILL"],
+            [30, 36, "SKILL"]
+        ]
+    },
+    {
+        "text": "Knowledgeable in DevOps practices and CI/CD pipelines",
+        "entities": [
+            [14, 20, "SKILL"],
+            [37, 41, "SKILL"]
+        ]
+    },
+    {
+        "text": "Proficient in Java Spring and Hibernate frameworks",
+        "entities": [
+            [14, 24, "SKILL"],
+            [29, 38, "SKILL"]
+        ]
+    },
+    {
+        "text": "Expert in Linux kernel and system administration",
+        "entities": [
+            [5, 10, "SKILL"],
+            [17, 26, "SKILL"],
+            [33, 53, "SKILL"]
+        ]
+    },
+    {
+        "text": "Advanced networking skills - configuring routers, switches, firewalls",
+        "entities": [
+            [8, 22, "SKILL"],
+            [25, 41, "SKILL"],
+            [44, 54, "SKILL"],
+            [57, 66, "SKILL"]
+        ]
+    },
+    {
+        "text": "Experience setting up Kubernetes clusters on AWS and GCP",
+        "entities": [
+            [17, 28, "SKILL"],
+            [37, 57, "SKILL"],
+            [61, 64, "SKILL"]
+        ]
+    },
+    {
+        "text": "Skilled software developer with 5 years building scalable web apps",
+        "entities": [
+            [10, 26, "SKILL"],
+            [52, 68, "SKILL"],
+            [73, 83, "SKILL"]
+        ]
+    },
+    {
+        "text": "Proficiency in Java, Python, C++, JavaScript, and Golang",
+        "entities": [
+            [14, 19, "SKILL"],
+            [22, 28, "SKILL"],
+            [31, 34, "SKILL"],
+            [37, 47, "SKILL"],
+            [52, 58, "SKILL"]
+        ]
+    },
+    {
+        "text": "Expertise in full stack development using MongoDB, Express, React, Node",
+        "entities": [
+            [20, 33, "SKILL"],
+            [44, 51, "SKILL"],
+            [55, 61, "SKILL"],
+            [65, 70, "SKILL"],
+            [74, 78, "SKILL"]
+        ]
+    },
+    {
+        "text": "Experience with machine learning libraries PyTorch, TensorFlow, Keras",
+        "entities": [
+            [17, 45, "SKILL"],
+            [50, 60, "SKILL"],
+            [65, 75, "SKILL"],
+            [80, 85, "SKILL"]
+        ]
+    },
+    {
+        "text": "Skilled in CI/CD pipelines, GitLab, Jenkins, Bamboo, CircleCI",
+        "entities": [
+            [10, 24, "SKILL"],
+            [29, 35, "SKILL"],
+            [40, 47, "SKILL"],
+            [52, 59, "SKILL"],
+            [64, 72, "SKILL"]
+        ]
+    },
+    {
+        "text": "SQL",
+        "entities": [
+            [0, 3, "SKILL"]
+        ]
+    },
+    {
+        "text": "JavaScript",
+        "entities": [
+            [0, 10, "SKILL"]
+        ]
+    },
+    {
+        "text": "Machine Learning",
+        "entities": [
+            [0, 16, "SKILL"]
+        ]
+    },
+    {
+        "text": "Data Analysis",
+        "entities": [
+            [0, 13, "SKILL"]
+        ]
+    },
+    {
+        "text": "React.js",
+        "entities": [
+            [0, 8, "SKILL"]
+        ]
+    },
+    {
+        "text": "AngularJS",
+        "entities": [
+            [0, 9, "SKILL"]
+        ]
+    },
+    {
+        "text": "Node.js",
+        "entities": [
+            [0, 7, "SKILL"]
+        ]
+    },
+    {
+        "text": "MongoDB",
+        "entities": [
+            [0, 7, "SKILL"]
+        ]
+    },
+    {
+        "text": "AWS Cloud",
+        "entities": [
+            [0, 8, "SKILL"]
+        ]
+    },
+    {
+        "text": "Azure Cloud",
+        "entities": [
+            [0, 11, "SKILL"]
+        ]
+    },
+    {
+        "text": "Statistical Modeling",
+        "entities": [
+            [0, 20, "SKILL"]
+        ]
+    },
+    {
+        "text": "Linux operating system",
+        "entities": [
+            [0, 5, "SKILL"]
+        ]
+    },
+    {
+        "text": "Windows Server administration",
+        "entities": [
+            [0, 6, "SKILL"],
+            [17, 28, "SKILL"]
+        ]
+    },
+    {
+        "text": "Network configuration and troubleshooting",
+        "entities": [
+            [0, 8, "SKILL"],
+            [25, 42, "SKILL"]
+        ]
+    },
+    {
+        "text": "TCP/IP, OSI model",
+        "entities": [
+            [0, 7, "SKILL"],
+            [12, 17, "SKILL"]
+        ]
+    },
+    {
+        "text": "Routing protocols like OSPF, BGP",
+        "entities": [
+            [0, 15, "SKILL"],
+            [22, 25, "SKILL"],
+            [30, 33, "SKILL"]
+        ]
+    },
+    {
+        "text": "Cisco switching and routing",
+        "entities": [
+            [0, 5, "SKILL"],
+            [13, 19, "SKILL"]
+        ]
+    },
+    {
+        "text": "VPN configuration",
+        "entities": [
+            [0, 13, "SKILL"]
+        ]
+    },
+    {
+        "text": "Firewall administration",
+        "entities": [
+            [0, 9, "SKILL"],
+            [17, 28, "SKILL"]
+        ]
+    },
+    {
+        "text": "Network security",
+        "entities": [
+            [0, 14, "SKILL"]
+        ]
+    },
+    {
+        "text": "Penetration testing",
+        "entities": [
+            [0, 19, "SKILL"]
+        ]
+    },
+    {
+        "text": "Burp Suite",
+        "entities": [
+            [0, 9, "SKILL"]
+        ]
+    },
+    {
+        "text": "Wireshark network analysis",
+        "entities": [
+            [0, 9, "SKILL"],
+            [17, 32, "SKILL"]
+        ]
+    },
+    {
+        "text": "CCNA certification",
+        "entities": [
+            [0, 10, "SKILL"]
+        ]
+    },
+    {
+        "text": "VMware administration",
+        "entities": [
+            [0, 6, "SKILL"],
+            [17, 28, "SKILL"]
+        ]
+    },
+    {
+        "text": "SAN storage configuration",
+        "entities": [
+            [0, 3, "SKILL"],
+            [14, 32, "SKILL"]
+        ]
+    },
+    {
+        "text": "NAS storage administration",
+        "entities": [
+            [0, 3, "SKILL"],
+            [15, 33, "SKILL"]
+        ]
+    },
+    {
+        "text": "RAID arrays",
+        "entities": [
+            [0, 7, "SKILL"]
+        ]
+    },
+    {
+        "text": "Docker containerization",
+        "entities": [
+            [0, 6, "SKILL"],
+            [17, 32, "SKILL"]
+        ]
+    },
+    {
+        "text": "Kubernetes",
+        "entities": [
+            [0, 10, "SKILL"]
+        ]
+    },
+    {
+        "text": "Jenkins CI/CD pipelines",
+        "entities": [
+            [0, 7, "SKILL"],
+            [17, 30, "SKILL"]
+        ]
+    },
+    {
+        "text": "Ansible automation",
+        "entities": [
+            [0, 6, "SKILL"],
+            [17, 27, "SKILL"]
+        ]
+    },
+    {
+        "text": "Terraform infrastructure-as-code",
+        "entities": [
+            [0, 9, "SKILL"],
+            [18, 38, "SKILL"]
+        ]
+    },
+    {
+        "text": "Azure administration",
+        "entities": [
+            [0, 6, "SKILL"],
+            [17, 29, "SKILL"]
+        ]
+    },
+    {
+        "text": "AWS cloud architecture",
+        "entities": [
+            [0, 3, "SKILL"],
+            [13, 29, "SKILL"]
+        ]
+    },
+    {
+        "text": "Google Cloud Platform",
+        "entities": [
+            [0, 22, "SKILL"]
+        ]
+    },
+    {
+        "text": "DevOps culture and practices ",
+        "entities": [
+            [0, 6, "SKILL"],
+            [18, 34, "SKILL"]
+        ]
+    },
+    {
+        "text": "Agile development methodologies",
+        "entities": [
+            [0, 5, "SKILL"],
+            [20, 42, "SKILL"]
+        ]
+    },
+    {
+        "text": "Waterfall SDLC",
+        "entities": [
+            [0, 8, "SKILL"],
+            [13, 16, "SKILL"]
+        ]
+    },
+    {
+        "text": "Object-oriented analysis and design",
+        "entities": [
+            [0, 25, "SKILL"],
+            [31, 36, "SKILL"]
+        ]
+    },
+    {
+        "text": "SQL database programming",
+        "entities": [
+            [0, 3, "SKILL"],
+            [14, 28, "SKILL"]
+        ]
+    },
+    {
+        "text": "Oracle database administration",
+        "entities": [
+            [0, 6, "SKILL"],
+            [17, 35, "SKILL"]
+        ]
+    },
+    {
+        "text": "MongoDB NoSQL databases",
+        "entities": [
+            [0, 7, "SKILL"],
+            [15, 29, "SKILL"]
+        ]
+    },
+    {
+        "text": "Redis in-memory caching",
+        "entities": [
+            [0, 5, "SKILL"],
+            [17, 29, "SKILL"]
+        ]
+    },
+    {
+        "text": "Data modeling and warehousing",
+        "entities": [
+            [0, 15, "SKILL"],
+            [21, 32, "SKILL"]
+        ]
+    },
+    {
+        "text": "ETL processing pipelines",
+        "entities": [
+            [0, 3, "SKILL"],
+            [15, 31, "SKILL"]
+        ]
+    },
+    {
+        "text": "Hadoop cluster configuration",
+        "entities": [
+            [0, 6, "SKILL"],
+            [20, 38, "SKILL"]
+        ]
+    },
+    {
+        "text": "Spark big data processing",
+        "entities": [
+            [0, 5, "SKILL"],
+            [16, 30, "SKILL"]
+        ]
+    },
+    {
+        "text": "Tableau data visualization",
+        "entities": [
+            [0, 7, "SKILL"],
+            [17, 33, "SKILL"]
+        ]
+    },
+    {
+        "text": "Power BI business analytics",
+        "entities": [
+            [0, 8, "SKILL"],
+            [17, 33, "SKILL"]
+        ]
+    },
+    {
+        "text": "Python programming",
+        "entities": [
+            [0, 6, "SKILL"],
+            [17, 28, "SKILL"]
+        ]
+    },
+    {
+        "text": "Java Spring Boot framework",
+        "entities": [
+            [0, 4, "SKILL"],
+            [10, 26, "SKILL"]
+        ]
+    },
+    {
+        "text": "PHP web application development",
+        "entities": [
+            [0, 3, "SKILL"],
+            [14, 37, "SKILL"]
+        ]
+    },
+    {
+        "text": "Ruby on Rails web framework",
+        "entities": [
+            [0, 3, "SKILL"],
+            [10, 27, "SKILL"]
+        ]
+    },
+    {
+        "text": "JavaScript front-end development",
+        "entities": [
+            [0, 10, "SKILL"],
+            [22, 40, "SKILL"]
+        ]
+    },
+    {
+        "text": "React web applications",
+        "entities": [
+            [0, 5, "SKILL"],
+            [16, 30, "SKILL"]
+        ]
+    },
+    {
+        "text": "Angular single page applications",
+        "entities": [
+            [0, 7, "SKILL"],
+            [17, 37, "SKILL"]
+        ]
+    },
+    {
+        "text": "Node.js back-end services",
+        "entities": [
+            [0, 7, "SKILL"],
+            [17, 29, "SKILL"]
+        ]
+    },
+    {
+        "text": "REST API design and development",
+        "entities": [
+            [0, 10, "SKILL"],
+            [28, 47, "SKILL"]
+        ]
+    },
+    {
+        "text": "GraphQL API development",
+        "entities": [
+            [0, 7, "SKILL"],
+            [17, 31, "SKILL"]
+        ]
+    },
+    {
+        "text": "Unit testing frameworks like JUnit",
+        "entities": [
+            [0, 15, "SKILL"],
+            [24, 29, "SKILL"]
+        ]
+    },
+    {
+        "text": "UX design and usability",
+        "entities": [
+            [0, 7, "SKILL"],
+            [16, 27, "SKILL"]
+        ]
+    },
+    {
+        "text": "Git version control system",
+        "entities": [
+            [0, 18, "SKILL"],
+            [30, 36, "SKILL"]
+        ]
+    },
+    {
+        "text": "Continuous integration and delivery",
+        "entities": [
+            [0, 28, "SKILL"],
+            [36, 44, "SKILL"]
+        ]
+    },
+    {
+        "text": "R language data analysis",
+        "entities": [
+            [0, 11, "SKILL"],
+            [20, 33, "SKILL"]
+        ]
+    },
+    {
+        "text": "MATLAB numerical computing",
+        "entities": [
+            [0, 6, "SKILL"],
+            [17, 31, "SKILL"]
+        ]
+    },
+    {
+        "text": "C++ high performance programming",
+        "entities": [
+            [0, 2, "SKILL"],
+            [18, 37, "SKILL"]
+        ]
+    },
+    {
+        "text": "Multithreading and concurrency",
+        "entities": [
+            [0, 15, "SKILL"],
+            [22, 34, "SKILL"]
+        ]
+    },
+    {
+        "text": "Cryptography and encryption algorithms",
+        "entities": [
+            [0, 13, "SKILL"],
+            [24, 44, "SKILL"]
+        ]
+    },
+    {
+        "text": "Cybersecurity awareness ",
+        "entities": [
+            [0, 14, "SKILL"],
+            [26, 40, "SKILL"]
+        ]
+    },
+    {
+        "text": "Penetration testing and ethical hacking",
+        "entities": [
+            [0, 23, "SKILL"],
+            [31, 47, "SKILL"]
+        ]
+    },
+    {
+        "text": "Artificial intelligence and machine learning",
+        "entities": [
+            [0, 25, "SKILL"],
+            [35, 52, "SKILL"]
+        ]
+    },
+    {
+        "text": "Neural networks and deep learning",
+        "entities": [
+            [0, 15, "SKILL"],
+            [25, 39, "SKILL"]
+        ]
+    },
+    {
+        "text": "Computer vision with OpenCV",
+        "entities": [
+            [0, 16, "SKILL"],
+            [26, 32, "SKILL"]
+        ]
+    },
+    {
+        "text": "Natural language processing techniques",
+        "entities": [
+            [0, 33, "SKILL"],
+            [46, 58, "SKILL"]
+        ]
+    },
+    {
+        "text": "Recommender systems algorithms",
+        "entities": [
+            [0, 23, "SKILL"],
+            [30, 42, "SKILL"]
+        ]
+    },
+    {
+        "text": "Python",
+        "entities": [
+            [0, 6, "SKILL"]
+        ]
+    },
+    {
+        "text": "Java",
+        "entities": [
+            [0, 4, "SKILL"]
+        ]
+    },
+    {
+        "text": "JavaScript",
+        "entities": [
+            [0, 10, "SKILL"]
+        ]
+    },
+    {
+        "text": "TypeScript",
+        "entities": [
+            [0, 10, "SKILL"]
+        ]
+    },
+    {
+        "text": "C++",
+        "entities": [
+            [0, 3, "SKILL"]
+        ]
+    },
+    {
+        "text": "C#",
+        "entities": [
+            [0, 2, "SKILL"]
+        ]
+    },
+    {
+        "text": "Go",
+        "entities": [
+            [0, 2, "SKILL"]
+        ]
+    },
+    {
+        "text": "Ruby",
+        "entities": [
+            [0, 4, "SKILL"]
+        ]
+    },
+    {
+        "text": "PHP",
+        "entities": [
+            [0, 3, "SKILL"]
+        ]
+    },
+    {
+        "text": "Swift",
+        "entities": [
+            [0, 5, "SKILL"]
+        ]
+    },
+    {
+        "text": "Rust",
+        "entities": [
+            [0, 4, "SKILL"]
+        ]
+    },
+    {
+        "text": "Dart",
+        "entities": [
+            [0, 4, "SKILL"]
+        ]
+    },
+    {
+        "text": "Kotlin",
+        "entities": [
+            [0, 6, "SKILL"]
+        ]
+    },
+    {
+        "text": "SQL",
+        "entities": [
+            [0, 3, "SKILL"]
+        ]
+    },
+    {
+        "text": "NoSQL",
+        "entities": [
+            [0, 5, "SKILL"]
+        ]
+    },
+    {
+        "text": "C",
+        "entities": [
+            [0, 1, "SKILL"]
+        ]
+    },
+    {
+        "text": "Scala",
+        "entities": [
+            [0, 5, "SKILL"]
+        ]
+    },
+    {
+        "text": "Perl",
+        "entities": [
+            [0, 4, "SKILL"]
+        ]
+    },
+    {
+        "text": "Haskell",
+        "entities": [
+            [0, 7, "SKILL"]
+        ]
+    },
+    {
+        "text": "Bash",
+        "entities": [
+            [0, 4, "SKILL"]
+        ]
+    },
+    {
+        "text": "Shell",
+        "entities": [
+            [0, 5, "SKILL"]
+        ]
+    },
+    {
+        "text": "Cobol",
+        "entities": [
+            [0, 5, "SKILL"]
+        ]
+    },
+    {
+        "text": "Fortran",
+        "entities": [
+            [0, 7, "SKILL"]
+        ]
+    },
+    {
+        "text": "Visual Basic",
+        "entities": [
+            [0, 13, "SKILL"]
+        ]
+    },
+    {
+        "text": "Assembly",
+        "entities": [
+            [0, 9, "SKILL"]
+        ]
+    },
+    {
+        "text": "Pascal",
+        "entities": [
+            [0, 6, "SKILL"]
+        ]
+    },
+    {
+        "text": "Ada",
+        "entities": [
+            [0, 3, "SKILL"]
+        ]
+    },
+    {
+        "text": "ABAP",
+        "entities": [
+            [0, 4, "SKILL"]
+        ]
+    },
+    {
+        "text": "RPG",
+        "entities": [
+            [0, 3, "SKILL"]
+        ]
+    },
+    {
+        "text": "Lisp",
+        "entities": [
+            [0, 4, "SKILL"]
+        ]
+    },
+    {
+        "text": "Prolog",
+        "entities": [
+            [0, 6, "SKILL"]
+        ]
+    },
+    {
+        "text": "F#",
+        "entities": [
+            [0, 2, "SKILL"]
+        ]
+    },
+    {
+        "text": "Lua",
+        "entities": [
+            [0, 3, "SKILL"]
+        ]
+    },
+    {
+        "text": "MATLAB",
+        "entities": [
+            [0, 6, "SKILL"]
+        ]
+    },
+    {
+        "text": "SAS",
+        "entities": [
+            [0, 3, "SKILL"]
+        ]
+    },
+    {
+        "text": "SPSS",
+        "entities": [
+            [0, 4, "SKILL"]
+        ]
+    },
+    {
+        "text": "R",
+        "entities": [
+            [0, 1, "SKILL"]
+        ]
+    },
+    {
+        "text": "Julia",
+        "entities": [
+            [0, 5, "SKILL"]
+        ]
+    },
+    {
+        "text": "Mahout",
+        "entities": [
+            [0, 6, "SKILL"]
+        ]
+    },
+    {
+        "text": "Solr",
+        "entities": [
+            [0, 4, "SKILL"]
+        ]
+    },
+    {
+        "text": "Lucene",
+        "entities": [
+            [0, 6, "SKILL"]
+        ]
+    },
+    {
+        "text": "HBase",
+        "entities": [
+            [0, 4, "SKILL"]
+        ]
+    },
+    {
+        "text": "Cassandra",
+        "entities": [
+            [0, 9, "SKILL"]
+        ]
+    },
+    {
+        "text": "Neo4j",
+        "entities": [
+            [0, 5, "SKILL"]
+        ]
+    },
+    {
+        "text": "Unix",
+        "entities": [
+            [0, 4, "SKILL"]
+        ]
+    },
+    {
+        "text": "Linux",
+        "entities": [
+            [0, 5, "SKILL"]
+        ]
+    },
+    {
+        "text": "Windows",
+        "entities": [
+            [0, 7, "SKILL"]
+        ]
+    },
+    {
+        "text": "MacOS",
+        "entities": [
+            [0, 5, "SKILL"]
+        ]
+    },
+    {
+        "text": "Android",
+        "entities": [
+            [0, 7, "SKILL"]
+        ]
+    }
+]
