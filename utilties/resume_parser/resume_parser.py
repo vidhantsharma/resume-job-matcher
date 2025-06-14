@@ -56,8 +56,9 @@ class ResumeParser:
         education_extractor = ExtractEducation()
         education = education_extractor.extract_education(resume_text)
 
-        skills_extractor = ExtractSkills()
+        skills_extractor = ExtractSkills(use_llm=False)
         skills = skills_extractor.extract_skills(resume_text)
+
         
         return {
             'first_name': first_name,

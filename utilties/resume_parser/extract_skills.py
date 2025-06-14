@@ -7,9 +7,10 @@ import re
 
 
 class ExtractSkills:
-    def __init__(self, csv_file="data/skills.csv", gemma_model_path=r"llm_model\gemma\gemma-2-9b-it-Q4_K_M.gguf"):
+    def __init__(self, csv_file="data/skills.csv", use_llm = False, gemma_model_path=r"llm_model\gemma\gemma-2-9b-it-Q4_K_M-fp16.gguf"):
         self.csv_file = csv_file
         self.gemma_model_path = gemma_model_path
+        self.use_llm=use_llm
 
     def extract_skills(self, text):
         """
@@ -22,7 +23,11 @@ class ExtractSkills:
         """
         csv_skills = self.extract_skills_from_csv(text)
         ner_skills = self.extract_skills_from_ner(text)
-        llm_skills = self.extract_skills_from_llm(text)
+        if self.use_llm:
+            llm_skills = self.extract_skills_from_llm(text)
+        else:
+            llm_skills = set()
+
 
         return list(csv_skills.union(ner_skills).union(llm_skills))
     
@@ -79,7 +84,7 @@ class ExtractSkills:
             return set()
 
 
-    def extract_skills_from_llm(self, text, gemma_model_path=r"llm_model\gemma\gemma-2-9b-it-Q4_K_M.gguf"):
+    def extract_skills_from_llm(self, text, gemma_model_path=r"llm_model\gemma\gemma-2-9b-it-Q4_K_M-fp16.gguf"):
         try:
             llm = Llama(
                 model_path=gemma_model_path,
