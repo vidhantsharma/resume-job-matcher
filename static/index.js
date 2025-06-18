@@ -28,8 +28,17 @@ function uploadResume() {
             resumeUploaded = true;
             uploadedResumeId = data.resume_id;
 
-            const textarea = document.getElementById('parsedResumeText');
-            let formatted = '';
+            const first_name = document.getElementById('first_name');
+            const last_name = document.getElementById('last_name');
+            const email = document.getElementById('email');
+            const phone = document.getElementById('phone');
+            const total_experience = document.getElementById('total_experience');
+            const degrees = document.getElementById('degrees');
+            const institutions = document.getElementById('institutions');
+            const majors = document.getElementById('majors');
+            const skills = document.getElementById('skills');
+            
+            let formatted = {};
             const order = [
                 'first_name',
                 'last_name',
@@ -53,12 +62,54 @@ function uploadResume() {
                 skills: 'Skills'
             };
             for (const key of order) {
+                
                 if (key in data.parsed_data) {
-                    const value = data.parsed_data[key];
+                    let value = data.parsed_data[key];
+
+                    switch(key){
+                        case "first_name":                        
+                            first_name.value=value 
+                            break;
+                        
+                        case "last_name":                        
+                            last_name.value=value
+                            break;
+
+                        case "email":
+                            email.value=value
+                            break;
+
+                        case "phone":
+                            phone.value=value
+                            break;
+
+                        case "total_experience":
+                            total_experience.value=value
+                            console.log(total_experience.value)
+                            break;
+
+                        case "degrees":
+                            degrees.value=value
+                            break;
+
+                        case "institutions":
+                            institutions.value=value
+                            break;
+
+                        case "majors":
+                            majors.value=value
+                            break;
+
+                        case "skills":
+                            skills.value=value
+                            break;
+                }
+                    
+                    
                     formatted += `${labels[key]}: ${Array.isArray(value) ? value.join(', ') : value}\n`;
                 }
             }
-            textarea.value = formatted;
+            
 
             alert("Resume uploaded and parsed successfully!");
         } else {
@@ -70,17 +121,61 @@ function uploadResume() {
     });
 }
 
+// form actions
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Stop the form from submitting the default way
+
+      // Get form values
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      // Basic validation
+      if (!name || !email) {
+        document.getElementById("responseMessage").textContent = "Please fill in all required fields.";
+        document.getElementById("responseMessage").style.color = "red";
+        return;
+      }
+
+      // Simulate sending data (you could send this to a server using fetch/AJAX)
+      console.log("Form Submitted:", { name, email, message });
+
+      // Show success message
+      document.getElementById("responseMessage").textContent = "Thank you! Your message has been sent.";
+      document.getElementById("responseMessage").style.color = "green";
+
+      // Optionally, reset the form
+      document.getElementById("contactForm").reset();
+    });
+
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('resumeUpload').addEventListener('change', uploadResume);
 });
 
-function toggleEdit() {
-    const textarea = document.getElementById('parsedResumeText');
-    textarea.readOnly = !textarea.readOnly;
-    if (!textarea.readOnly) {
-        textarea.focus();
+function toggleEdit(id) {
+    let textarea;
+
+    switch (id) {
+        case 'nameEdit':
+            textarea = document.getElementById('name');
+            break;
+        case 'emailEdit':
+            textarea = document.getElementById('email');
+            break;
+        // add more cases as needed
+        default:
+            console.warn('Unknown ID:', id);
+            return;
+    }
+
+    if (textarea) {
+        textarea.readOnly = !textarea.readOnly;
+        if (!textarea.readOnly) {
+            textarea.focus();
+        }
     }
 }
+
 
 function updateResumeInfo() {
     if (!uploadedResumeId) {

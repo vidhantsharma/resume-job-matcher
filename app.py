@@ -4,6 +4,7 @@ from flask_cors import CORS
 import os
 import sqlite3
 import click
+from utilties.resume_parser.resume_parser import ResumeParser
 
 # Import the parser
 from main import get_parsed_resume_data
@@ -65,6 +66,14 @@ def init_db():
             jd_id INTEGER,
             filename TEXT NOT NULL,
             content BLOB NOT NULL,
+            name TEXT NOT NULL,
+            email TEXT NOT NULL,
+            phone TEXT NOT NULL,
+            total_experience VARCHAR, 
+            degrees TEXT NOT NULL,            
+            institutions TEXT NOT NULL,
+            majors TEXT NOT NULL,
+            skills TEXT NOT NULL,
             FOREIGN KEY(jd_id) REFERENCES job_descriptions(jd_id)
         )
     ''')
@@ -77,14 +86,12 @@ def init_db_command():
         init_db()
     click.echo('Initialized the database.')
 
-# -----------------------
-# Routes
-# -----------------------
-
+# Load homepage 
 @app.route('/')
 def home():
     return render_template('index.html')
 
+#form
 @app.route('/upload_resume', methods=['POST'])
 def upload_resume():
     if 'resume' not in request.files:
@@ -102,16 +109,52 @@ def upload_resume():
         with open(file_path, 'rb') as f:
             content = f.read()
 
+        #function call from utilities to parse data using NLP (can be parsed without NLP too)
+        parsed_data = get_parsed_resume_data(content) 
+        
+        # resume_info=ResumeParser.extract_resume_info(parsed_data)
+
+        if "first_name" in parsed_data:
+            first_name = parsed_data.get("first_name", "Unknown")
+        if "last_name" in parsed_data:
+            last_name=parsed_data.get("last_name", "Unknown")
+        name=first_name +" "+ last_name
+
+        if "email" in parsed_data:
+            email=parsed_data.get("email", "Unknown")
+
+        if "phone" in parsed_data:
+            phone=parsed_data.get("phone", "Unknown")
+
+        if "total_experience" in parsed_data:
+            total_experience= str(parsed_data.get("total_experience", "Unknown"))
+
+        if "degrees" in parsed_data:
+            degrees=str(parsed_data.get("degrees", "Unknown"))
+
+        if "institutions" in parsed_data:
+            institutions=str(parsed_data.get("institutions", "Unknown"))
+
+        if "majors" in parsed_data:
+            majors=str(parsed_data.get("majors", "Unknown"))
+
+        if "skills" in parsed_data:
+            skills=str(parsed_data.get("skills", "Unknown"))
+            
+
+        #database debugger
+        print("Inserting values:", (None, filename, name, email, phone, total_experience, degrees, institutions, majors, skills))
+
         conn = get_db()
         cur = conn.cursor()
         cur.execute(
-            'INSERT INTO resumes (jd_id, filename, content) VALUES (?, ?, ?)',
-            (None, filename, content)
+            'INSERT INTO resumes (jd_id, filename, content, name, email, phone, total_experience, degrees, institutions, majors, skills) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+            (None, filename, content, name, email, phone, total_experience, degrees, institutions, majors, skills )
         )
+        
         resume_id = cur.lastrowid
         conn.commit()
-
-        parsed_data = get_parsed_resume_data(content)
+        
         return jsonify({
             'message': f"File '{filename}' uploaded.",
             'resume_id': resume_id,
@@ -144,6 +187,7 @@ def update_resume_info():
         print("Update error:", e)
         return jsonify({'message': 'Failed to update resume'}), 500
 
+#JD
 @app.route('/add_jd', methods=['POST'])
 def add_jd():
     data = request.get_json()
